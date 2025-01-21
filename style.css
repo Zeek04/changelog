@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9f9;
+}
+
+.changelog{
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.header-container {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+}
+
+.header-container p {
+    color: #ddd;
+    margin: 5px 0 0;
+    font-size: 1.1rem;
+}
+
+.changelog-container {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.changelog-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.date {
+    flex: 1;
+    text-align: right;
+    color: #ddd;
+    font-size: 0.95rem;
+    padding-right: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 20px;
+    position: relative;
+}
+
+.dot::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 6rem;
+    background-color: #fff;
+}
+
+.dot::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background-color: #fff;
+}
+
+.changelog-entry:last-child .dot::after {
+    display: none; /* Remove the line for the last item */
+}
+
+.items {
+    flex: 2;
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+}
+
+.button-container {
+    margin-top: 3rem;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    color: black;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
